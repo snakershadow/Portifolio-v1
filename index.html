@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Site</title>
+    <style>
+        /* Reset e Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Seção Sobre Mim */
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #3498db;
+            margin: 0.5rem auto;
+        }
+
+        .about {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        /* Seção Projetos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e1f0fa;
+            color: #3498db;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Thiago da Silva Matheus</h1>
+        <p>Desenvolvedor & Estudante de Sistemas de Informação</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="sobre">
+            <h2 class="section-title">Sobre mim</h2>
+            <div class="about">
+                <p>
+                    Olá! Sou Thiago, estudante de Sistemas de Informação no IFF Itaperuna e empreendedor no setor de elétrica automotiva. 
+                    Tenho paixão por tecnologia, desde o desenvolvimento de software e gestão de bancos de dados até projetos de hardware 
+                    com sistemas embarcados. Busco constantemente aplicar o conhecimento técnico para resolver problemas reais e criar 
+                    experiências digitais impactantes.
+                </p>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2 class="section-title">Projetos</h2>
+            <div class="projects-grid">
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>IA em Decisões Empresariais</h3>
+                        <p>Desenvolvimento de uma metodologia baseada em Python para auxiliar na tomada de decisão estratégica em negócios utilizando inteligência artificial.</p>
+                        <span class="tag">Python & Data Science</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Bip, O Robô Sem Som</h3>
+                        <p>Autoria e publicação de um livro infantil na Amazon, explorando a criatividade e o design focado no público jovem.</p>
+                        <span class="tag">Publicação & Design</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Gestão de Servidores FiveM</h3>
+                        <p>Programação de scripts personalizados e gerenciamento técnico de servidores de Roleplay, focando em otimização e experiência do usuário.</p>
+                        <span class="tag">Lua & Scripting</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Thiago da Silva Matheus. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">Desenvolvido com foco em tecnologia e inovação.</p>
+    </footer>
+
+</body>
+</html>
