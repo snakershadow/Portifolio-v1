@@ -3,126 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Site</title>
+    <title>Portfólio | Thiago da Silva Matheus</title>
     <style>
-        /* Reset e Estilos Gerais */
+        /* Reset e Estilos de Base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
         }
 
-        /* Cabeçalho */
+        /* Cabeçalho Profissional */
         header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 4px solid #3b82f6;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            letter-spacing: -1px;
             margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
         }
 
         /* Container Principal */
         .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
         }
 
-        /* Seção Sobre Mim */
         .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-            font-size: 2rem;
-            position: relative;
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .section-title::after {
             content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: #3498db;
-            margin: 0.5rem auto;
+            flex-grow: 1;
+            height: 1px;
+            background: #cbd5e1;
         }
 
-        .about {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        /* Sobre e Experiência */
+        .grid-main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
             margin-bottom: 3rem;
         }
 
-        /* Seção Projetos */
+        .card-white {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Habilidades */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .skill-tag {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #dbeafe;
+        }
+
+        /* Projetos */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
         }
 
-        .card {
+        .project-card {
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card-content {
             padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
         }
 
-        .card-content h3 {
-            margin-bottom: 1rem;
-            color: #2c3e50;
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
         }
 
-        .card-content p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #e1f0fa;
-            color: #3498db;
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-top: 1rem;
-            font-weight: bold;
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 0.8rem;
         }
 
         /* Rodapé */
         footer {
-            background: #2c3e50;
+            background: #0f172a;
             color: white;
+            padding: 3rem 1rem;
             text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
+            margin-top: 5rem;
         }
 
-        /* Responsividade */
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
+        @media (max-width: 768px) {
+            .grid-main { grid-template-columns: 1fr; }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -130,59 +156,92 @@
 
     <header>
         <h1>Thiago da Silva Matheus</h1>
-        <p>Desenvolvedor & Estudante de Sistemas de Informação</p>
+        <p class="subtitle">Desenvolvedor de Software | Sistemas de Informação | Empreendedor</p>
+        <div class="contact-info">
+            <span class="contact-item">📍 Itaperuna - RJ</span>
+            <span class="contact-item">📞 (22) 9816-25123</span>
+            <span class="contact-item">✉️ thiagomatheuswb12@gmail.com</span>
+        </div>
     </header>
 
     <div class="container">
         
-        <section id="sobre">
-            <h2 class="section-title">Sobre mim</h2>
-            <div class="about">
-                <p>
-                    Olá! Sou Thiago, estudante de Sistemas de Informação no IFF Itaperuna e empreendedor no setor de elétrica automotiva. 
-                    Tenho paixão por tecnologia, desde o desenvolvimento de software e gestão de bancos de dados até projetos de hardware 
-                    com sistemas embarcados. Busco constantemente aplicar o conhecimento técnico para resolver problemas reais e criar 
-                    experiências digitais impactantes.
-                </p>
+        <div class="grid-main">
+            <div>
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="card-white">
+                    <p>Estudante de Sistemas de Informação no IFF Itaperuna e empreendedor no setor de elétrica automotiva. Sou proativo e dedicado ao desenvolvimento de soluções digitais que unem hardware e software. Tenho experiência prática com sistemas embarcados (ESP32/Arduino) e foco atual em Inteligência Artificial aplicada a decisões empresariais.</p>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 2rem;">Experiência Profissional</h2>
+                <div class="card-white">
+                    <div style="margin-bottom: 1.5rem;">
+                        <strong style="color: #2563eb;">Empresário e Gestor Técnico</strong><br>
+                        <small>Setor Automotivo | 2026 - Atual</small>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Gestão de operações e aplicação de tecnologias de automação em veículos clássicos.</p>
+                    </div>
+                    <div>
+                        <strong style="color: #2563eb;">Consultoria e Desenvolvimento Freelancer</strong><br>
+                        <small>2023 - Atual</small>
+                        <ul style="font-size: 0.95rem; margin-top: 5px; padding-left: 1.2rem;">
+                            <li>Apoio técnico e resolução de problemas de programação.</li>
+                            <li>Desenvolvimento de scripts personalizados (Lua) para servidores FiveM.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section id="projetos">
-            <h2 class="section-title">Projetos</h2>
-            <div class="projects-grid">
-                
-                <div class="card">
-                    <div class="card-content">
-                        <h3>IA em Decisões Empresariais</h3>
-                        <p>Desenvolvimento de uma metodologia baseada em Python para auxiliar na tomada de decisão estratégica em negócios utilizando inteligência artificial.</p>
-                        <span class="tag">Python & Data Science</span>
-                    </div>
+            <div>
+                <h2 class="section-title">Habilidades</h2>
+                <div class="card-white">
+                    <ul class="skills-list">
+                        <li class="skill-tag">Python</li>
+                        <li class="skill-tag">Java</li>
+                        <li class="skill-tag">C</li>
+                        <li class="skill-tag">SQL</li>
+                        <li class="skill-tag">JavaScript</li>
+                        <li class="skill-tag">NodeJS</li>
+                        <li class="skill-tag">Git / GitHub</li>
+                        <li class="skill-tag">ESP32 & Arduino</li>
+                        <li class="skill-tag">HTML5 & CSS3</li>
+                    </ul>
                 </div>
 
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Bip, O Robô Sem Som</h3>
-                        <p>Autoria e publicação de um livro infantil na Amazon, explorando a criatividade e o design focado no público jovem.</p>
-                        <span class="tag">Publicação & Design</span>
-                    </div>
+                <h2 class="section-title" style="margin-top: 2rem;">Educação</h2>
+                <div class="card-white">
+                    <strong>Bacharelado em SI</strong><br>
+                    <small>IFF Campus Itaperuna</small><br>
+                    <small>Início: 2025</small>
                 </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Gestão de Servidores FiveM</h3>
-                        <p>Programação de scripts personalizados e gerenciamento técnico de servidores de Roleplay, focando em otimização e experiência do usuário.</p>
-                        <span class="tag">Lua & Scripting</span>
-                    </div>
-                </div>
-
             </div>
-        </section>
+        </div>
+
+        <h2 class="section-title">Projetos de Destaque</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>IA em Decisões Empresariais</h3>
+                <p>Desenvolvimento de metodologia em Python para análise de dados e auxílio estratégico em negócios (Projeto de TCC).</p>
+                <div style="margin-top: 1rem;"><span class="skill-tag">Python</span> <span class="skill-tag">IA</span></div>
+            </div>
+
+            <div class="project-card">
+                <h3>Bip, O Robô Sem Som</h3>
+                <p>Livro infantil publicado na Amazon, unindo narrativa criativa e design para o público jovem.</p>
+                <div style="margin-top: 1rem;"><span class="skill-tag">Design</span> <span class="skill-tag">Publicação</span></div>
+            </div>
+
+            <div class="project-card">
+                <h3>Automação Veicular</h3>
+                <p>Implementação de sistemas de controle inteligentes e câmeras de ponto cego em veículos (Palio 98 / Corcel II).</p>
+                <div style="margin-top: 1rem;"><span class="skill-tag">Hardware</span> <span class="skill-tag">C++</span></div>
+            </div>
+        </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Thiago da Silva Matheus. Todos os direitos reservados.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">Desenvolvido com foco em tecnologia e inovação.</p>
+        <p><strong>Thiago da Silva Matheus</strong></p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">© 2026 - Desenvolvido com foco em Inovação e Tecnologia.</p>
     </footer>
 
 </body>
